@@ -15,6 +15,9 @@ npm run docs 'folder_name'
 
 [MarkdownToFolderHTML](https://github.com/joakin/markdown-folder-to-html)
 
+### Limitazione foto
+Per le immagini fare upload direttamente nella repository e prendere il link.
+
 ### Convertitore
 
 Convertitore Google Doc in Markdown [MarkdownConverter](https://gdoc2md.com/); non è perfetto e con i link e le immagini commette errori.
