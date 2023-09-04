@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "docs": "markdown-folder-to-html"
+    "docs": "markdown-folder-to-html",
+    "postdocs": "node script"
+
   },
   "devDependencies": {
     "markdown-folder-to-html": "^2.4.0"

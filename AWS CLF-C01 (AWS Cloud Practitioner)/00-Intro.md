@@ -28,7 +28,7 @@ La certificazione AWS Cloud Practitioner offre una panoramica approfondita dell'
 
 Ecco una roadmap delle certificazioni AWS:
 
-![Roadmap](.\imgs\image-roadmap-aws.png)
+![Roadmap](https://github.com/Elpiu/MindMemoir/blob/main/docs/AWS%20CLF-C01%20(AWS%20Cloud%20Practitioner)/imgs/image-roadmap-aws.png?raw=true)
 
 
 ## Tempo di studio consigliato

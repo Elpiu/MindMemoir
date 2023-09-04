@@ -478,58 +478,54 @@
       <nav id="menu">
         <ul>
 <li><a class="" href="00-A Glossario.html">A Glossario</a></li>
-<li><a class="" href="00-Intro.html">Intro</a></li>
+<li><a class="active" href="00-Intro.html">Intro</a></li>
 <li><a class="" href="01-Cloud e AWS.html">Cloud e AWS</a></li>
-<li><a class="active" href="workingOn.html">workingOn</a></li>
+<li><a class="" href="workingOn.html">workingOn</a></li>
 </ul>
       </nav>
       <article id="main" class="content">
-        <h3 id="aws-global-infrastrucutre">AWS Global Infrastrucutre <a class="heading-anchor-permalink" href="#aws-global-infrastrucutre">#</a></h3>
-<p>Global Infrastructure: sono delle strutture globali hardware e datacenters connesse fisicamente dalla rete, per agire come un unica grande risorsa all’utente finale.
-AWS Global Infrastructures is made up of the following resources:</p>
+        <h1 id="introduzione">Introduzione <a class="heading-anchor-permalink" href="#introduzione">#</a></h1>
+<p><strong>AWS Cloud Practitioner</strong> è una certificazione di livello base (entry-level) offerta da AWS che copre una serie di concetti fondamentali legati al cloud computing. In questo corso vengono trattati vari argomenti, tra cui:</p>
 <ul>
-<li>25 Launched Regions</li>
-<li>81 Availability Zone</li>
-<li>108 Direct Connection Locations</li>
-<li>275+ Point of Presence</li>
-<li>11 Local Zone</li>
-<li>17 Wavelenght Zone</li>
+<li>Fondamenti del cloud</li>
+<li>Concetti del cloud</li>
+<li>Architettura del cloud</li>
+<li>Modelli di distribuzione del cloud</li>
+<li>Panoramica dei servizi core di AWS</li>
+<li>Panoramica dei servizi AWS</li>
+<li>Fatturazione, prezzi e supporto dei servizi AWS</li>
 </ul>
-<h3 id="regions">Regions <a class="heading-anchor-permalink" href="#regions">#</a></h3>
-<p>Le regioni sono are geografiche distinte, consistono in una o più Availability Zones</p>
-<p>Ogni regione di solito ha 3 Availability Zones
-I nuovi utenti sono limitati a 2.
-I nuovi servizi quasi sempre vengono resi disponibili alla 1.
-Non tutti i servizi AWS sono disponibili in tutte le regioni.
-Il costo per i servizi AWS variano per regione.</p>
-<p>Quando si sceglie una regione ci sono 4 fattori da tenere in considerazione:</p>
-<ol>
-<li>La regolamentazione della regione</li>
-<li>Il costo dei servizi AWS in quella regione</li>
-<li>I servizi disponibili in quella regione</li>
-<li>La distanza o latenza all’utente finale</li>
-</ol>
-<h3 id="availability-zones-(az)">Availability Zones (AZ) <a class="heading-anchor-permalink" href="#availability-zones-(az)">#</a></h3>
-<p>Una zona di disponibilità è una zona fisica dove sono presenti uno o più datacenter.</p>
-<p>Un datacenter è un edeificio sicuro che contiente centinaia di migliaia di computers.</p>
-<p>Una regione di solito contiente 3 AZ, i datacenters sono isolati (in edifici differenti), ma sono abbastanza vicini da abbassare la latenza a (&lt;10ms). è una pratica comune lanciare workloads in almeno 3 AZs per essere sicuri che il servizio rimanga accessibile in caso di uno o due datacenter non disponibili (Hight Availability).</p>
-<p>Una sottorete (subnet) è associata a un AZ.
-Non sceglierai mai l’AZ quando lanci le risorse,
-quello che sceglierai è la sottorete.</p>
-<h3 id="fault-tolerance">Fault Tolerance <a class="heading-anchor-permalink" href="#fault-tolerance">#</a></h3>
-<h5 id="fault-domain">Fault Domain <a class="heading-anchor-permalink" href="#fault-domain">#</a></h5>
-<p>Un fault domain è una sezione della rete che è vulnerabile a un fail di sistema o danno di un device.  Lo scopo del fault domain è che se accade una failure, essa non farà cadere in cascata il dominio, limitando il danno il più possibile.</p>
-<p>Si possono avere fault domain innestate in altre fault domain.</p>
-<p>Si parla di fault level, quando si hanno diversi livelli di fault, una collezione di fault domains.
-Gli scope possono essere: uno specifico server in un rack, un intero rack in un datacenter, un intera stanza in un datacenter, l’intero datacenter.
-Sta al CSP definire i confini del dominio.</p>
-<p>Ogni regione amazon è designata per esser completamente isolata dalle altre Regioni amazon. Questo fa si che si abbia la maggior possibilità di dault tolerance e stability. Ogni AZ è isolata ma connessa con link low-latency alle altre regioni, e ogni regione ha un suo piano indipendente di failure zone.</p>
-<h4 id="failure-zone">Failure zone <a class="heading-anchor-permalink" href="#failure-zone">#</a></h4>
-<p>Ogni AZ è fisicamente separata dalle altre e tipicamente in altre cittò, queste sono localizzate in are poco a ricschio (esempio alluvione).
-Ogni AZ ha la sua UPS uninterruptible power supply e un suo sito di backup per generare energia.
-Le AZ sono localizzate in zone indipendenti da altre AZ dall’infrastruttura della rete elettrica in modo da evitare eventi di blackout.
-Le AZ sono connesse in modo ridondante a provider tier-1.</p>
-<h3 id="global-network">Global Network <a class="heading-anchor-permalink" href="#global-network">#</a></h3>
+<p>Questa certificazione è spesso abbreviata in CCP, ed è particolarmente utile per coloro che vogliono iniziare a comprendere il mondo del cloud computing e acquisire una conoscenza base di AWS (o nella cloud industry).</p>
+<h2 id="chi-dovrebbe-prendere-questa-certificazione%3F">Chi dovrebbe prendere questa certificazione? <a class="heading-anchor-permalink" href="#chi-dovrebbe-prendere-questa-certificazione%3F">#</a></h2>
+<p>La certificazione AWS Cloud Practitioner è pensata per diverse categorie di persone:</p>
+<ul>
+<li>Chi è nuovo al mondo del cloud computing e ha bisogno di imparare le basi.</li>
+<li>Esecutivi, responsabili o venditori che necessitano di una comprensione strategica del cloud per supportare l’adozione o la migrazione.</li>
+<li>Ingegneri senior specializzati nel cloud o architetti delle soluzioni che vogliono rinfrescare le loro conoscenze dopo anni di esperienza.</li>
+</ul>
+<h2 id="valore-della-certificazione">Valore della certificazione <a class="heading-anchor-permalink" href="#valore-della-certificazione">#</a></h2>
+<p>La certificazione AWS Cloud Practitioner offre una panoramica approfondita dell’architettura del cloud e dei servizi offerti da AWS. Questa certificazione può essere un punto di partenza ideale per chiunque voglia entrare nel mondo della tecnologia cloud.</p>
+<p>Ecco una roadmap delle certificazioni AWS:</p>
+<p><img src="https://github.com/Elpiu/MindMemoir/blob/main/docs/AWS%20CLF-C01%20(AWS%20Cloud%20Practitioner)/imgs/image-roadmap-aws.png?raw=true" alt="Roadmap"></p>
+<h2 id="tempo-di-studio-consigliato">Tempo di studio consigliato <a class="heading-anchor-permalink" href="#tempo-di-studio-consigliato">#</a></h2>
+<p>Per prepararsi all’esame AWS Cloud Practitioner, è raccomandato dedicare in media 24 ore di studio, distribuite idealmente nell’arco di 1-2 ore al giorno per 14 giorni.</p>
+<h2 id="guida-all%E2%80%99esame">Guida all’esame <a class="heading-anchor-permalink" href="#guida-all%E2%80%99esame">#</a></h2>
+<p>L’esame è suddiviso in 4 domini, ognuno con un peso diverso nella valutazione finale:</p>
+<p><strong>26%</strong>: Dominio 1 - Concetti del Cloud</p>
+<p><strong>25%</strong>: Dominio 2 - Sicurezza e Conformità</p>
+<p><strong>33%</strong>: Dominio 3 - Tecnologia</p>
+<p><strong>16%</strong>: Dominio 4 - Fatturazione e Prezzi</p>
+<p>Alcuni dettagli sull’esame:</p>
+<ul>
+<li>Per superare l’esame è necessario totalizzare almeno 700 punti su 1000.</li>
+<li>L’esame consiste in 65 domande, di cui 50 con valore e 15 senza valore (utilizzate per misurare la difficoltà).</li>
+<li>Non ci sono penalità per risposte errate.</li>
+<li>Le domande possono avere una o più risposte corrette.</li>
+<li>Il tempo totale a disposizione per l’esame è 90 minuti.</li>
+<li>La certificazione ha una validità di 36 mesi.</li>
+</ul>
+<p>Nota: Tieni presente che alcune di queste informazioni potrebbero subire variazioni nel corso del tempo. Pertanto, è consigliabile fare riferimento alle fonti aggiornate, poiché le informazioni datate qui si riferiscono al periodo intorno al 2022.</p>
+<h3 id="videocorso-youtube-by-andrew-brown"><a href="https://www.youtube.com/watch?v=SOTamWNgDKc">Videocorso Youtube by Andrew Brown</a> <a class="heading-anchor-permalink" href="#videocorso-youtube-by-andrew-brown">#</a></h3>
 
       </article>
     </div>
