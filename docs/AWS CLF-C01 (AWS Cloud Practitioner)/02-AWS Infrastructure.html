@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /*! ADAPTED
+    Typeplate : Starter Kit
+    URL ........... http://typeplate.com
+    Version ....... 3.0.2
+    Github ........ https://github.com/typeplate/starter-kit
+    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+    License ....... Creative Commmons Attribution 3.0
+    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+    */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-rendering: optimizeLegibility;
+        line-height: 1;
+        margin-top: 0;
+        color: #222;
+      }
+
+      blockquote + figcaption cite {
+        display: block;
+        font-size: inherit;
+        text-align: right;
+      }
+
+      body {
+        word-wrap: break-word;
+      }
+
+      pre code {
+        word-wrap: normal;
+      }
+
+      body {
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        color: #444;
+      }
+
+      h1 {
+        font-size: 2em;
+        /* 2*16 = 32 */
+      }
+
+      h2 {
+        font-size: 1.5em;
+        /* 1.5*16 = 24 */
+      }
+
+      h3 {
+        font-size: 1.17em;
+        /* 1.17*16 = 18.72 */
+      }
+
+      h4 {
+        font-size: 1em;
+        /* 1*16 = 16 */
+      }
+
+      h5 {
+        font-size: 0.83em;
+        /* 0.83*16 = 13.28 */
+      }
+
+      h6 {
+        font-size: 0.75em;
+        /* 0.75*16 = 12 */
+      }
+
+      h1 {
+        margin: 2.42424rem 0 1.454544rem;
+      }
+
+      h2 {
+        margin: 2.0202rem 0 1.21212rem;
+      }
+
+      h3 {
+        margin: 1.61616rem 0 1rem;
+      }
+
+      h4 {
+        margin: 1.21212rem 0 1;
+      }
+
+      h5 {
+        margin: 0.80808rem 0;
+      }
+
+      h6 {
+        margin: 0.70707rem 0;
+      }
+
+      p {
+        margin: auto auto 1.5rem;
+      }
+
+      small {
+        font-size: 65%;
+      }
+
+      input,
+      abbr,
+      acronym,
+      blockquote,
+      code,
+      kbd,
+      q,
+      samp,
+      var {
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      pre {
+        white-space: pre;
+      }
+
+      pre code {
+        white-space: -moz-pre-wrap;
+        white-space: pre-wrap;
+      }
+
+      code {
+        white-space: pre;
+        font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
+      }
+
+      abbr {
+        -webkit-font-variant: small-caps;
+        -moz-font-variant: small-caps;
+        -ms-font-variant: small-caps;
+        font-variant: small-caps;
+        font-weight: 600;
+        text-transform: lowercase;
+        color: gray;
+      }
+
+      abbr[title]:hover {
+        cursor: help;
+      }
+
+      /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol";
+        color: #444;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+      }
+
+      code,
+      pre {
+        background-color: #f5f5f5;
+        color: #444;
+        border-radius: 2px;
+        text-shadow: 0px 1px 0px white;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+      }
+
+      pre code {
+        border: none;
+        box-shadow: none;
+      }
+
+      pre {
+        padding: 0.5em;
+      }
+
+      code {
+        display: inline-block;
+        padding: 0 0.5em;
+        line-height: 1.4;
+        font-size: 0.9em;
+      }
+
+      table {
+        border-spacing: 0;
+        margin-bottom: 1.5rem;
+      }
+
+      table th,
+      table td {
+        padding: 0.3em 0.7em;
+      }
+
+      table th {
+        background-color: #f4f4f4;
+        border-bottom: 2px solid #444;
+      }
+
+      table td {
+        border: 1px solid #f5f5f5;
+      }
+
+      /* Add transition to containers so they can push in and out. */
+
+      #layout,
+      #menu,
+      .menu-link {
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+      }
+
+      /* This is the parent `<div>` that contains the menu and the content area. */
+
+      #layout {
+        position: relative;
+        padding-left: 0;
+      }
+
+      #layout.active #menu {
+        left: 250px;
+        width: 250px;
+      }
+
+      #layout.active .menu-link {
+        left: 250px;
+      }
+
+      /* The content `<div>` is where all your content goes. */
+
+      .content {
+        margin: 50px auto;
+        padding: 0 2em;
+        max-width: 80ex;
+        line-height: 1.6em;
+      }
+
+      /*
+      The `#menu` `<div>` is the parent `<div>` that contains the menu that
+      appears on the left side of the page.
+      */
+
+      #menu {
+        margin-left: -250px;
+        /* "#menu" width */
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1000;
+        /* so the menu or its navicon stays above all content */
+        background: #f4f4f4;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        font-size: 0.9em;
+      }
+
+      @media print {
+        #menu,
+        .menu-link {
+          display: none !important;
+        }
+      }
+
+      a,
+      a * {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      a:visited {
+        text-decoration: none;
+        color: #2483cc;
+      }
+
+      /* All anchors inside the menu should be styled like this. */
+
+      #menu a {
+        display: block;
+        padding: 0.5em 0.5em;
+      }
+
+      #menu a:first-letter {
+        text-transform: capitalize;
+      }
+
+      #menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 1em 0.5em;
+      }
+
+      #menu ul ul {
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        border-left: 4px solid rgba(255, 255, 255, 0.5);
+      }
+
+      /* Change color of the anchor links on hover/focus. */
+
+      #menu li a:hover,
+      #menu li a:focus {
+        background: rgba(255, 255, 255, 0.4);
+      }
+
+      /* This styles the selected menu item `<li>`. */
+
+      #menu li a.active {
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      /* This styles a link within a selected menu item `<li>`. */
+
+      #menu li a.active {
+        color: #222;
+      }
+
+      /* This styles the menu heading. */
+
+      #menu li.heading {
+        font-size: 0.9em;
+        text-transform: uppercase;
+        color: #000;
+      }
+
+      #menu li.heading > * {
+        padding: 0.5em;
+        display: block;
+      }
+
+      #menu li.heading a {
+        color: #0c68af;
+      }
+
+      /* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+      /*
+      `.menu-link` represents the responsive menu toggle that shows/hides on
+      small screens.
+      */
+
+      .menu-link {
+        position: fixed;
+        display: block;
+        /* show this only on small screens */
+        top: 0;
+        left: 0;
+        /* "#menu width" */
+        font-size: 10px;
+        /* change this value to increase/decrease button size */
+        z-index: 10;
+        width: 2em;
+        height: auto;
+        padding: 1.6em 1.2em;
+        border-radius: 0 2px 2px 0;
+      }
+
+      .menu-link:hover {
+        background: #f4f4f4;
+      }
+
+      .menu-link span {
+        position: relative;
+        display: block;
+      }
+
+      .menu-link span,
+      .menu-link span:before,
+      .menu-link span:after {
+        background-color: #555;
+        width: 100%;
+        height: 0.2em;
+        border-radius: 1em;
+      }
+
+      .menu-link span:before,
+      .menu-link span:after {
+        position: absolute;
+        margin-top: -0.6em;
+        content: " ";
+      }
+
+      .menu-link span:after {
+        margin-top: 0.6em;
+      }
+
+      /* Hides the menu at `48em`, but modify this based on your app's needs. */
+
+      @media (min-width: 48em) {
+        .header,
+        .content {
+          padding-left: 2em;
+          padding-right: 2em;
+        }
+
+        #layout {
+          padding-left: 250px;
+          /* left col width "#menu" */
+          left: 0;
+        }
+        #menu {
+          left: 250px;
+        }
+
+        .menu-link {
+          position: fixed;
+          left: 250px;
+          display: none;
+        }
+
+        #layout.active .menu-link {
+          left: 250px;
+        }
+      }
+
+      @media (max-width: 48em) {
+        /* Only apply this when the window is small. Otherwise, the following case results in extra padding on the left:
+         * Make the window small.
+         * Tap the menu to trigger the active state.
+         * Make the window large again.
+         */
+        #layout.active {
+          position: relative;
+          left: 250px;
+        }
+      }
+
+      /* Heading anchors and permalinks */
+      h1[id],
+      h2[id],
+      h3[id],
+      h4[id],
+      h5[id],
+      h6[id] {
+        position: relative;
+      }
+      .heading-anchor-permalink {
+        /* Position the permalink to the left of the title */
+        position: absolute;
+        right: 100%;
+        /* Add some spacing as padding to not lose the hover */
+        padding-right: 0.6rem;
+        /* Make it only visible on heading hover, see below */
+        opacity: 0;
+      }
+      h1[id]:hover .heading-anchor-permalink,
+      h2[id]:hover .heading-anchor-permalink,
+      h3[id]:hover .heading-anchor-permalink,
+      h4[id]:hover .heading-anchor-permalink,
+      h5[id]:hover .heading-anchor-permalink,
+      h6[id]:hover .heading-anchor-permalink {
+        opacity: 0.5;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <div id="layout">
+      <!-- Menu toggle -->
+      <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+      </a>
+      <nav id="menu">
+        <ul>
+<li><a class="" href="00-A Glossario.html">A Glossario</a></li>
+<li><a class="" href="00-Intro.html">Intro</a></li>
+<li><a class="" href="01-Cloud e AWS.html">Cloud e AWS</a></li>
+<li><a class="active" href="02-AWS Infrastructure.html">AWS Infrastructure</a></li>
+<li><a class="" href="workingCloudArchitecture Terminologies.html">workingCloudArchitecture Terminologies</a></li>
+</ul>
+      </nav>
+      <article id="main" class="content">
+        <h1 id="aws-infrastructure">AWS Infrastructure <a class="heading-anchor-permalink" href="#aws-infrastructure">#</a></h1>
+<h2 id="infrastruttura-globale-aws">Infrastruttura Globale AWS <a class="heading-anchor-permalink" href="#infrastruttura-globale-aws">#</a></h2>
+<p>L’infrastruttura globale di AWS è costituita da una vasta rete di data center e risorse hardware connessi tramite una rete globale, che agisce come una singola risorsa globale per gli utenti finali. La struttura di AWS Global Infrastructure include:</p>
+<ul>
+<li>25 regioni operative</li>
+<li>81 zone di disponibilità (Availability Zone)</li>
+<li>108 posizioni di connessione diretta (Direct Connection Locations)</li>
+<li>Più di 275 punti di presenza (Point of Presence)</li>
+<li>11 Local Zone</li>
+<li>17 Wavelength Zone</li>
+</ul>
+<h2 id="regioni">Regioni <a class="heading-anchor-permalink" href="#regioni">#</a></h2>
+<p>Le regioni AWS sono aree geografiche separate, ognuna delle quali consiste in una o più zone di disponibilità. Generalmente, ogni regione ha almeno 3 zone di disponibilità, sebbene i nuovi utenti possano avere accesso a 2 di esse inizialmente. Nuovi servizi di solito vengono resi disponibili nella prima zona di disponibilità. Non tutti i servizi AWS sono disponibili in tutte le regioni, e i costi dei servizi possono variare da una regione all’altra.</p>
+<p>Quando si sceglie una regione, è importante considerare quattro fattori:</p>
+<ul>
+<li>Conformità normativa nella regione.</li>
+<li>Costi dei servizi AWS nella regione.</li>
+<li>Disponibilità dei servizi nella regione.</li>
+<li>Distanza o latenza per gli utenti finali.</li>
+</ul>
+<h2 id="zone-di-disponibilit%C3%A0-(az)">Zone di Disponibilità (AZ) <a class="heading-anchor-permalink" href="#zone-di-disponibilit%C3%A0-(az)">#</a></h2>
+<p>Una zona di disponibilità è un’area fisica che contiene uno o più data center. Ogni data center è un edificio sicuro che ospita centinaia di migliaia di server. In genere, una regione AWS ha tre zone di disponibilità, e questi data center sono separati e isolati fisicamente, ma sono sufficientemente vicini da garantire una bassa latenza (meno di 10 ms). È una pratica comune distribuire i carichi di lavoro in almeno tre zone di disponibilità per garantire l’alta disponibilità in caso di guasti in uno o due data center.</p>
+<p>Ogni sottorete (subnet) è associata a una zona di disponibilità, ma quando si lanciano risorse, si sceglie la sottorete piuttosto che la zona di disponibilità.</p>
+<h2 id="fault-tolerance-(tolleranza-ai-guasti)">Fault Tolerance (Tolleranza ai guasti) <a class="heading-anchor-permalink" href="#fault-tolerance-(tolleranza-ai-guasti)">#</a></h2>
+<h3 id="fault-domain">Fault Domain <a class="heading-anchor-permalink" href="#fault-domain">#</a></h3>
+<p>Un fault domain è una parte della rete che è vulnerabile a guasti hardware o a danni a dispositivi. L’obiettivo del fault domain è limitare al massimo i danni in caso di failure, in modo che non si verifichi una cascata di guasti. I fault domain possono essere nidificati all’interno di altri fault domain, e ciò può comportare diversi livelli di tolleranza ai guasti, con scope che possono essere specifici server in un rack, l’intero rack in un data center, un’intera stanza in un data center o persino l’intero data center. La definizione dei confini del dominio di errore è responsabilità del fornitore di servizi cloud (CSP).</p>
+<p>Ogni regione AWS è progettata per essere completamente isolata dalle altre regioni, il che offre la massima possibilità di tolleranza ai guasti e stabilità. Ogni zona di disponibilità è isolata ma è collegata con collegamenti a bassa latenza alle altre regioni, e ciascuna regione ha un piano indipendente per le zone di errore (failure zone).</p>
+<h3 id="failure-zone">Failure Zone <a class="heading-anchor-permalink" href="#failure-zone">#</a></h3>
+<p>Ogni zona di disponibilità è fisicamente separata dalle altre e di solito è situata in una città diversa, spesso in aree a basso rischio di eventi come alluvioni. Ogni zona di disponibilità dispone di un’alimentazione ininterrotta (UPS Uninterruptible power supply) e di un sito di backup per la generazione di energia. Inoltre, le zone di disponibilità sono connesse in modo ridondante ai provider di rete tier-1.</p>
+<h2 id="rete-globale">Rete Globale <a class="heading-anchor-permalink" href="#rete-globale">#</a></h2>
+<p>La rete globale di AWS rappresenta l’interconnessione dell’intera infrastruttura globale di AWS ed è spesso chiamata “la spina dorsale di AWS”. Questa rete è progettata come un’autostrada privata per consentire un rapido transito dei dati tra i data center.</p>
+<h2 id="point-of-presence-(pop)">Point of Presence (PoP) <a class="heading-anchor-permalink" href="#point-of-presence-(pop)">#</a></h2>
+<p>Un Point of Presence, o PoP, è una posizione intermedia tra una regione AWS e l’utente finale. Un PoP può essere costituito da un data center o da una collezione di hardware. Per AWS, un PoP può essere un data center di proprietà di AWS o di un partner fidato, utilizzato per la distribuzione di contenuti o per il caricamento accelerato dei dati. I tipi di risorse PoP includono le edge location e le regional edge caches.</p>
+<p><strong>Edge Locations</strong>: sono data center che fungono da cache per i file più popolari, come pagine web, immagini e video, al fine di ridurre il tempo di consegna all’utente finale.</p>
+<p><strong>Regional Edge Locations</strong>: sono data center che mantengono una cache di file meno popolari, contribuendo a ridurre i costi di trasferimento dei dati.</p>
+<p>I PoP sono situati ai bordi delle interconnessioni tra reti e spesso sono collegati a reti tier-1, che possono raggiungere tutte le altre reti senza dover pagare per gli indirizzi IP di transito o le tariffe di peering.</p>
+<h2 id="aws-direct-connect">AWS Direct Connect <a class="heading-anchor-permalink" href="#aws-direct-connect">#</a></h2>
+<p>AWS Direct Connect è un servizio che offre connessioni private e dedicate tra il tuo data center, il tuo ufficio, i tuoi spazi di co-location e AWS. Direct Connect offre due opzioni di connessione a velocità elevate:</p>
+<ul>
+<li>Banda larga inferiore (50-500 Mbps)</li>
+<li>Banda larga superiore (1-10 Gbps)</li>
+</ul>
+<p>Questo servizio aiuta a ridurre i costi di rete e migliora la coerenza e la sicurezza delle connessioni rispetto a una connessione Internet tipica.</p>
+<h2 id="direct-connect-locations">Direct Connect Locations <a class="heading-anchor-permalink" href="#direct-connect-locations">#</a></h2>
+<p>Le Direct Connect Locations sono partner di data center verificati dove è possibile stabilire connessioni ad alta velocità dedicate e a bassa latenza tra la tua infrastruttura locale (on-premis) e AWS.</p>
+<h2 id="aws-local-zones">AWS Local Zones <a class="heading-anchor-permalink" href="#aws-local-zones">#</a></h2>
+<p>Le Local Zones sono data center situati in prossimità di aree densamente popolate per garantire una latenza estremamente bassa, nell’ordine dei millisecondi. Queste strutture sono progettate per supportare applicazioni altamente esigenti che richiedono bassa latenza, tra cui:</p>
+<ul>
+<li>Media &amp; Intrattenimento</li>
+<li>Automazione del Design Elettronico</li>
+<li>Advertising Technology (Ad-Tech)</li>
+<li>Machine Learning</li>
+</ul>
+<h2 id="wavelength-zones">Wavelength Zones <a class="heading-anchor-permalink" href="#wavelength-zones">#</a></h2>
+<p>Le Wavelength Zones abilitano l’edge computing sulle reti 5G. Sono progettate per applicazioni che richiedono una latenza ultra-bassa e devono essere più vicine possibile agli utenti finali. AWS ha stretto collaborazioni con diverse aziende di reti 5G per offrire queste zone. Puoi creare una sottorete nelle Wavelength Zones e lanciare macchine virtuali (VM) sull’edge delle reti 5G.</p>
+<h2 id="data-residency">Data Residency <a class="heading-anchor-permalink" href="#data-residency">#</a></h2>
+<p><strong>Cosa è la Data Residency?</strong></p>
+<p>La Data Residency si riferisce alla posizione fisica o geografica in cui un’organizzazione o le risorse cloud risiedono.</p>
+<p><strong>Cosa sono le Compliance Boundaries?</strong></p>
+<p>Le Compliance Boundaries sono normative legali stabilite da un governo o da un’organizzazione che specificano dove i dati e le risorse cloud possono essere ospitati e archiviati in conformità con le leggi e i regolamenti.</p>
+<p><strong>Cosa è la Data Sovereignty?</strong></p>
+<p>La Data Sovereignty riguarda il controllo giurisdizionale o l’autorità legale che si applica ai dati a causa della loro posizione fisica entro i confini giurisdizionali.</p>
+<p>Per i carichi di lavoro che richiedono rigorose restrizioni di conformità in termini di posizione dei dati e risorse cloud su AWS, è possibile utilizzare diverse soluzioni:</p>
+<ul>
+<li><strong>AWS Config</strong>: AWS Config è un servizio di Policy as Code che consente di definire regole per verificare continuamente la conformità delle configurazioni delle risorse AWS. In caso di violazioni, è possibile ricevere notifiche o, in alcuni casi, AWS Config può correggere automaticamente la configurazione errata.</li>
+</ul>
+<!---->
+<ul>
+<li><strong>AWS Outposts</strong>: AWS Outposts è un servizio che offre un rack di server fisici forniti da Amazon che è possibile collocare nel proprio data center. Questi server mantengono i dati nella posizione fisica in cui si trova l’Outpost.</li>
+</ul>
+<!---->
+<ul>
+<li><strong>IAM Policies</strong>: Le IAM (Identity and Access Management) Policies possono essere utilizzate per rifiutare l’accesso a specifiche regioni AWS. Le Service Control Policies (SCP) sono autorizzazioni applicate a livello di organizzazione che possono limitare l’accesso alle regioni specifiche.</li>
+</ul>
+<h2 id="aws-for-government">AWS for Government <a class="heading-anchor-permalink" href="#aws-for-government">#</a></h2>
+<p><strong>Cos’è il Settore Pubblico?</strong></p>
+<p>Il settore pubblico comprende servizi governativi come l’esercito, le forze dell’ordine, le infrastrutture, i servizi pubblici, l’istruzione pubblica, l’assistenza sanitaria e il governo stesso. AWS può essere utilizzato sia dal settore pubblico che dalle organizzazioni per ospitare carichi di lavoro destinati al settore pubblico. AWS ha raggiunto questo obiettivo attraverso programmi di conformità normativa specifici e controlli di sicurezza rigorosi.</p>
+<p><strong>GovCloud:</strong> GovCloud è una regione AWS speciale progettata per soddisfare le esigenze del governo degli Stati Uniti. Si basa sul programma Federal Risk and Authorization Management Program (FedRAMP), che stabilisce standard di sicurezza, valutazioni, autorizzazioni e monitoraggio continuo per i prodotti e i servizi cloud.</p>
+<h3 id="aws-in-cina">AWS in Cina <a class="heading-anchor-permalink" href="#aws-in-cina">#</a></h3>
+<p>AWS in Cina è la versione di AWS progettata specificamente per il mercato cinese. È completamente isolata dalla rete globale di AWS per conformarsi alle regolamentazioni cinesi. Per operare in una regione AWS in Cina, è necessaria una licenza di business chiamata China Business License (ICP license). Non tutti i servizi AWS sono disponibili in Cina, ad esempio Route 53. Utilizzando AWS in Cina, è possibile evitare di attraversare il “Great Firewall” cinese. AWS ha due regioni in Cina, entrambe fornite da partner cinesi.</p>
+<h2 id="sustainability">Sustainability <a class="heading-anchor-permalink" href="#sustainability">#</a></h2>
+<p>AWS si impegna a raggiungere l’obiettivo di zero emissioni nette di carbonio entro il 2040 in tutte le attività Amazon, compreso AWS. Gli obiettivi di sostenibilità di AWS sono suddivisi in tre parti:</p>
+<ul>
+<li>Energia rinnovabile: AWS sta lavorando per alimentare l’intera infrastruttura globale con fonti di energia rinnovabile al 100% entro il 2025.</li>
+</ul>
+<!---->
+<ul>
+<li>Efficienza del cloud: L’infrastruttura di AWS è 3,6 volte più efficiente dal punto di vista energetico rispetto alla media dei data center negli Stati Uniti.</li>
+</ul>
+<!---->
+<ul>
+<li>Gestione dell’acqua: AWS utilizza diverse strategie per gestire l’acqua in modo sostenibile, tra cui l’evaporazione diretta dell’acqua per il raffreddamento dei data center, l’uso di acqua non potabile (acqua riciclata), il trattamento per rimuovere i minerali e il riutilizzo dell’acqua per più cicli.</li>
+</ul>
+<h2 id="aws-ground-station">AWS Ground Station <a class="heading-anchor-permalink" href="#aws-ground-station">#</a></h2>
+<p>AWS Ground Station è un servizio che consente di controllare le comunicazioni satellitari, elaborare i dati e scalare senza dover costruire e gestire un’infrastruttura a terra. Questo servizio è utile per una serie di casi d’uso, tra cui previsioni meteorologiche, imaging della superficie terrestre, comunicazioni e trasmissioni video.</p>
+<h2 id="aws-outposts">AWS Outposts <a class="heading-anchor-permalink" href="#aws-outposts">#</a></h2>
+<p><strong>AWS Outposts:</strong> AWS Outposts è un servizio che consente di estendere l’infrastruttura AWS nel proprio data center, nello spazio di co-location o in una struttura on-premise. Questo servizio offre la stessa infrastruttura AWS, servizi AWS, API e strumenti che sono disponibili nelle regioni AWS, consentendo di creare un ambiente ibrido che combina l’infrastruttura locale con le capacità scalabili e flessibili di AWS.</p>
+
+      </article>
+    </div>
+    <script>
+      // Load contents.json if you need it
+    </script>
+    <script>
+      // FROM http://purecss.io/js/ui.js
+      (function(window, document) {
+        var layout = document.getElementById("layout"),
+          menu = document.getElementById("menu"),
+          menuLink = document.getElementById("menuLink");
+
+        function toggleClass(element, className) {
+          var classes = element.className.split(/\s+/),
+            length = classes.length,
+            i = 0;
+
+          for (; i < length; i++) {
+            if (classes[i] === className) {
+              classes.splice(i, 1);
+              break;
+            }
+          }
+          // The className is not found
+          if (length === classes.length) {
+            classes.push(className);
+          }
+
+          element.className = classes.join(" ");
+        }
+
+        menuLink.onclick = function(e) {
+          var active = "active";
+
+          e.preventDefault();
+          toggleClass(layout, active);
+          toggleClass(menu, active);
+          toggleClass(menuLink, active);
+        };
+      })(this, this.document);
+    </script>
+  </body>
+</html>
