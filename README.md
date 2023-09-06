@@ -1,7 +1,8 @@
 ### TODO 
+- [ ] creare uno script che compili tutte le cartelle (magari lista cartelle prese da un file di config)
+
 - [ ] creare un framework automatizzato con un modello template 
 - [ ] creare una guida del framework 
-
 
 # [MindMemoir](https://elpiu.github.io/MindMemoir/)
 

@@ -60,10 +60,31 @@ function renameUnderscoreDirectories(sourcePath: string): void {
   }
 }
 
+function deleteOldDirectoriesIfExists(targetPath) {
+  try {
+    // Ottieni l'elenco delle directory nella directory 
+    const directories = fs.readdirSync(targetPath);
+    if(!directories)
+      return
+    directories.forEach((directory) => {
+      if(directory !== "statics"){
+              const sourceDir = path.join(targetPath, directory);
+              console.log("Removing... ", sourceDir)
+              fs.rmSync(sourceDir, {force: true, recursive: true})
+      }
+    });
+  } catch (error) {
+    console.error(
+      "Si è verificato un errore durante la cancellazione delle directory:",
+      error
+    );
+  }
+}
+
 const sourcePath = process.cwd(); // Percorso corrente
 const targetPath = path.join(process.cwd(), "docs"); // Percorso della cartella 'docs'
 
-//TODO cancellare tutte le cartelle presenti in docs tranne statics (le vecchie folder deployate) va in eccezione lo script non potendo rinominare la directory.
+deleteOldDirectoriesIfExists(targetPath)
 
 moveUnderscoreDirectories(sourcePath, targetPath);
 renameUnderscoreDirectories(targetPath);
