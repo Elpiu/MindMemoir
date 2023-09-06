@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 var fs = require("fs");
 var path = require("path");
 /**
@@ -46,5 +46,6 @@ function renameUnderscoreDirectories(sourcePath) {
 }
 var sourcePath = process.cwd(); // Percorso corrente
 var targetPath = path.join(process.cwd(), "docs"); // Percorso della cartella 'docs'
+//TODO cancellare tutte le cartelle presenti in docs tranne statics (le vecchie folder deployate) va in eccezione lo script non potendo rinominare la directory.
 moveUnderscoreDirectories(sourcePath, targetPath);
 renameUnderscoreDirectories(targetPath);

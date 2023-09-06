@@ -63,7 +63,7 @@ function renameUnderscoreDirectories(sourcePath: string): void {
 const sourcePath = process.cwd(); // Percorso corrente
 const targetPath = path.join(process.cwd(), "docs"); // Percorso della cartella 'docs'
 
-//TODO cancellare tutte le cartelle presenti in docs tracce statics (le vecchie folder deployate) va in eccezione lo script non potendo rinominare la directory.
+//TODO cancellare tutte le cartelle presenti in docs tranne statics (le vecchie folder deployate) va in eccezione lo script non potendo rinominare la directory.
 
 moveUnderscoreDirectories(sourcePath, targetPath);
 renameUnderscoreDirectories(targetPath);

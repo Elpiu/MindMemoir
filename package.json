@@ -1,10 +1,12 @@
 {
   "scripts": {
     "docs": "markdown-folder-to-html",
-    "postdocs": "node UtilsScript/MoveAndReplaceNameDirectories",
-    "comMoveReplaceScript": "tsc UtilsScript/MoveAndReplaceNameDirectories.ts "
+    "postdocs": "node UtilsScript/MoveAndReplaceNameDirectories && node UtilsScript/GenerateTemplate",
+    "comMoveReplaceScript": "tsc UtilsScript/MoveAndReplaceNameDirectories.ts",
+    "comGenerateTemplateScript": "tsc UtilsScript/GenerateTemplate.ts"
   },
   "devDependencies": {
+    "@types/node": "^20.5.9",
     "markdown-folder-to-html": "^2.4.0",
     "tsconfig-paths": "^3.9.0"
   },

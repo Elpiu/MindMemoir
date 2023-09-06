@@ -1,3 +1,8 @@
+### TODO 
+- [ ] creare un framework automatizzato con un modello template 
+- [ ] creare una guida del framework 
+
+
 # [MindMemoir](https://elpiu.github.io/MindMemoir/)
 
 Qui tutti appunti in markdown su quello che studio/faccio

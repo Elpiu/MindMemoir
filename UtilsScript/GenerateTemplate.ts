@@ -1,6 +1,6 @@
-import fs from "fs";
-import { JSDOM } from "jsdom";
-import * as path from "path";
+import * as fs from 'fs';
+import { JSDOM } from 'jsdom';
+import * as path from 'path';
 
 /**
  * 1. Prendi il file nella cartella template con nome template1.html
@@ -10,33 +10,32 @@ import * as path from "path";
  */
 
 // TODO prendere con uno script sulla folder docs, tutte le cartelle eccetto 'statics'
-const sourcePath = process.cwd(); // Percorso corrente
+const sourcePath = path.join(process.cwd(), "docs"); // Percorso corrente
+console.log("sourcePath:", sourcePath)
 // Ottieni l'elenco delle directory nella directory sorgente
 let direcoriesNames = fs.readdirSync(sourcePath);
-const directorysToExclude = ["statics"];
+direcoriesNames = direcoriesNames.filter(name => fs.statSync(path.join(sourcePath, name)).isDirectory())
+const directoryToExclude = "statics";
 
-// Filtra le directory per escludere quelle specificate
-direcoriesNames = direcoriesNames.filter((directoryName) => {
-  return !directorysToExclude.includes(directoryName);
-});
+console.log("directories: " ,direcoriesNames)
 
 /**
  * Ritorna contenuto html di un itemlist
  * @param nomeFolder path e nome dell'item list
  */
 function returnNewListItem(nomeFolder) {
-  var a = `
+  return `
     <li class="list-group-item d-flex justify-content-between align-items-center">
-        <a href="./${nomeFolder}/00-Intro.html">
-            <span class="badge badge-primary badge-pill">${nomeFolder}</span>
+        <a href="./${nomeFolder}/00-Intro.html">${nomeFolder}
+            <span class="badge badge-primary badge-pill">${nomeFolder.substring(0, nomeFolder.indexOf(" "))}</span>
         </a>.
     </li>
     `;
 }
 
 // Leggi il contenuto del file HTML dal tuo template
-const templateFilePath = "./docs/template/template1.html";
-const html = fs.readFileSync(templateFilePath, "utf8");
+const templateFilePath = "statics/template/template1.html";
+const html = fs.readFileSync(path.join(sourcePath, templateFilePath), "utf8");
 
 // Creare un DOM virtuale
 const dom = new JSDOM(html);
@@ -44,11 +43,15 @@ const document = dom.window.document;
 
 // Trova la <ul> con id="addHere" nel documento
 const ulElement = document.getElementById("addHere");
-
+console.log("ulElement is:", ulElement)
 if (ulElement) {
   // Aggiungi gli elementi <li> generati dalla funzione returnNewListItem
   for (const directoryName of direcoriesNames) {
-    ulElement.innerHTML += returnNewListItem(directoryName);
+    // Filtra le directory per escludere quelle specificate
+    if(directoryName !== directoryToExclude){
+        ulElement.innerHTML += returnNewListItem(directoryName);
+    console.log(ulElement.innerHTML)
+    }
   }
 } else {
   console.error('Elemento con id="addHere" non trovato nel template.');
@@ -57,6 +60,7 @@ if (ulElement) {
 // Serializza il documento HTML
 const newHtml = dom.serialize();
 
-// Salva il documento HTML nella cartella "docs" con il nome "input.html"
-const outputFilePath = "./docs/input.html";
+// Salva il documento HTML nella cartella "docs" con il nome "index.html"
+const outputFilePath = "./docs/index.html";
 fs.writeFileSync(outputFilePath, newHtml, "utf8");
+console.log("File generato e salvato in: ", outputFilePath)
