@@ -2,11 +2,14 @@
   "scripts": {
     "docs": "markdown-folder-to-html",
     "postdocs": "node UtilsScript/MoveAndReplaceNameDirectories",
-
     "comMoveReplaceScript": "tsc UtilsScript/MoveAndReplaceNameDirectories.ts "
   },
   "devDependencies": {
     "markdown-folder-to-html": "^2.4.0",
     "tsconfig-paths": "^3.9.0"
+  },
+  "dependencies": {
+    "jsdom": "^22.1.0",
+    "prettier": "^3.0.3"
   }
 }
