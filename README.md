@@ -2,9 +2,10 @@
 
 MindMemoir ti permette di creare delle wiki dal tuo markdown e raggrupparle in un inco sito web. 
 
-![img]()
+| ![Immagine 1](https://github.com/Elpiu/MindMemoir/blob/template/docs/statics/screenshots/wiki.png) | ![Immagine 2](https://github.com/Elpiu/MindMemoir/blob/template/docs/statics/screenshots/home.png) |
+|:--:|:--:|
+| Risultato Wiki | HomePage |
 
-![img]()
 
 ### Genera wiki 
 
