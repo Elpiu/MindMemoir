@@ -477,106 +477,20 @@
       </a>
       <nav id="menu">
         <ul>
-<li><a class="" href="00-A Glossario.html">A Glossario</a></li>
 <li><a class="" href="00-Intro.html">Intro</a></li>
-<li><a class="" href="01-Cloud e AWS.html">Cloud e AWS</a></li>
-<li><a class="" href="02-AWS Infrastructure.html">AWS Infrastructure</a></li>
-<li><a class="active" href="03-Termini di Architettura Cloud.html">Termini di Architettura Cloud</a></li>
-<li><a class="" href="workingOnManagmentAndDevelopmentTools.html">workingOnManagmentAndDevelopmentTools</a></li>
+<li><a class="" href="01-BoB non so.html">BoB non so</a></li>
+<li><a class="active" href="02-Bo.html">Bo</a></li>
+<li><a class="" href="03-Yeaa.html">Yeaa</a></li>
+<li><a class="" href="04-Il Mare.html">Il Mare</a></li>
 </ul>
       </nav>
       <article id="main" class="content">
-        <h1 id="termini-di-architettura-cloud">Termini di Architettura Cloud <a class="heading-anchor-permalink" href="#termini-di-architettura-cloud">#</a></h1>
-<h2 id="solution-architect-(architetto-di-soluzioni)">Solution Architect (Architetto di Soluzioni) <a class="heading-anchor-permalink" href="#solution-architect-(architetto-di-soluzioni)">#</a></h2>
-<p>Un Solution Architect è un ruolo all’interno di un’organizzazione che si occupa di progettare soluzioni tecniche utilizzando sistemi multipli, comprese la ricerca, la documentazione e l’implementazione.</p>
-<h2 id="cloud-architect-(architetto-cloud)">Cloud Architect (Architetto Cloud) <a class="heading-anchor-permalink" href="#cloud-architect-(architetto-cloud)">#</a></h2>
-<p>Un Cloud Architect è essenzialmente un Solution Architect, ma si concentra esclusivamente sull’utilizzo dei servizi cloud.</p>
-<p>Un Cloud Architect deve essere familiare con i seguenti termini e deve tenerli in considerazione durante la progettazione dell’architettura, in base ai requisiti aziendali:</p>
-<ul>
-<li><strong>Disponibilità</strong>: la capacità di garantire che un servizio rimanga sempre accessibile.</li>
-<li><strong>Scalabilità</strong>: la capacità di far crescere un sistema rapidamente o senza intoppi.</li>
-<li><strong>Elasticità</strong>: la capacità di adattarsi e scalare automaticamente per rispondere alla domanda.</li>
-<li><strong>Fault Tolerance</strong>: la capacità di prevenire e gestire i guasti.</li>
-<li><strong>Disaster Recovery</strong>: la capacità di recuperare da un evento di fallimento.</li>
-</ul>
-<p>Un Solution Architect deve sempre considerare anche i fattori di sicurezza (quanto è sicura la soluzione) e i costi (quanto costerà).</p>
-<h2 id="alta-disponibilit%C3%A0-(high-availability)">Alta Disponibilità (High Availability) <a class="heading-anchor-permalink" href="#alta-disponibilit%C3%A0-(high-availability)">#</a></h2>
-<p>L’alta disponibilità si riferisce alla capacità di garantire che un servizio sia sempre accessibile. Ciò viene ottenuto eliminando i “single point of failure” e garantendo un certo livello di prestazioni.</p>
-<h2 id="bilanciamento-del-carico-elastico-(elastic-load-balancer)">Bilanciamento del Carico Elastico (Elastic Load Balancer) <a class="heading-anchor-permalink" href="#bilanciamento-del-carico-elastico-(elastic-load-balancer)">#</a></h2>
-<p>Un bilanciamento del carico elastico consente di distribuire il traffico su più server in uno o più data center. Se un server o un data center diventa inaccessibile, il bilanciatore di carico instrada il traffico solo verso le risorse disponibili.</p>
-<h2 id="alta-scalabilit%C3%A0-(high-scalability)">Alta Scalabilità (High Scalability) <a class="heading-anchor-permalink" href="#alta-scalabilit%C3%A0-(high-scalability)">#</a></h2>
-<p>L’alta scalabilità si riferisce alla capacità di aumentare la capacità di gestione di un sistema in base all’aumento del traffico, della memoria e della potenza di calcolo. Ci sono due approcci principali per la scalabilità:</p>
-<ul>
-<li><strong>Scalabilità Verticale (“Scaling up”)</strong>: migliorare le prestazioni di un singolo server.</li>
-<li><strong>Scalabilità Orizzontale (“Scaling Out”)</strong>: aggiungere più server della stessa dimensione.</li>
-</ul>
-<h2 id="alta-elasticit%C3%A0-(high-elasticity)">Alta Elasticità (High Elasticity) <a class="heading-anchor-permalink" href="#alta-elasticit%C3%A0-(high-elasticity)">#</a></h2>
-<p>L’alta elasticità si riferisce alla capacità di aumentare o diminuire automaticamente la capacità in risposta al traffico, alla memoria e alla potenza di calcolo. Le due principali modalità di elasticità sono:</p>
-<ul>
-<li><strong>Scalabilità Orizzontale (“Scaling Out”)</strong>: aggiungere più server della stessa dimensione.</li>
-<li><strong>Scalabilità Inversa (“Scaling In”)</strong>: rimuovere server non utilizzati della stessa dimensione.</li>
-</ul>
-<p>La scalabilità verticale è spesso difficile da implementare nelle architetture tradizionali, quindi di solito ci si affida principalmente alla scalabilità orizzontale per descrivere l’elasticità.</p>
-<h2 id="gruppi-di-auto-scaling-(auto-scaling-groups---asg)">Gruppi di Auto Scaling (Auto Scaling Groups - ASG) <a class="heading-anchor-permalink" href="#gruppi-di-auto-scaling-(auto-scaling-groups---asg)">#</a></h2>
-<p>ASG è una funzionalità di AWS che aggiunge o rimuove automaticamente server in base alle regole di scalabilità definite dalle metriche.</p>
-<h2 id="fault-tolerance-(tolleranza-ai-guasti)">Fault Tolerance (Tolleranza ai Guasti) <a class="heading-anchor-permalink" href="#fault-tolerance-(tolleranza-ai-guasti)">#</a></h2>
-<p>La fault tolerance si riferisce alla capacità di un servizio di prevenire e gestire i guasti, eliminando i “single point of failure”.</p>
-<p><strong>Failover</strong> è il processo di instradamento del traffico verso un sistema ridondante nel caso in cui il sistema primario fallisca.</p>
-<h2 id="rds-multi-az-(amazon-rds-multi-availability-zone)">RDS Multi-AZ (Amazon RDS Multi-Availability Zone) <a class="heading-anchor-permalink" href="#rds-multi-az-(amazon-rds-multi-availability-zone)">#</a></h2>
-<p>RDS Multi-AZ implica l’esecuzione di un database duplicato in standby in un’altra Availability Zone per evitare il fallimento del database primario.</p>
-<h2 id="alta-durabilit%C3%A0-(high-durability)">Alta Durabilità (High Durability) <a class="heading-anchor-permalink" href="#alta-durabilit%C3%A0-(high-durability)">#</a></h2>
-<p>L’alta durabilità si riferisce alla capacità di recuperare da disastri e prevenire la perdita di dati. Le soluzioni di alta durabilità sono conosciute come “Disaster Recovery (DR)”.</p>
-<h2 id="cloudendure-disaster-recovery">CloudEndure Disaster Recovery <a class="heading-anchor-permalink" href="#cloudendure-disaster-recovery">#</a></h2>
-<p>CloudEndure Disaster Recovery replica continuamente le tue macchine in una zona a basso costo, consentendo un rapido e affidabile ripristino del sistema in caso di guasto del data center IT.</p>
-<h2 id="piano-di-continuit%C3%A0-operativa-(bcp---business-continuity-plan)">Piano di Continuità Operativa (BCP - Business Continuity Plan) <a class="heading-anchor-permalink" href="#piano-di-continuit%C3%A0-operativa-(bcp---business-continuity-plan)">#</a></h2>
-<p>Un piano di continuità operativa è un documento che descrive come un’azienda continuerà a operare durante un’interruzione imprevista dei servizi.</p>
-<h2 id="obiettivo-di-punto-di-recupero-(rpo---recovery-point-objective)">Obiettivo di Punto di Recupero (RPO - Recovery Point Objective) <a class="heading-anchor-permalink" href="#obiettivo-di-punto-di-recupero-(rpo---recovery-point-objective)">#</a></h2>
-<p>RPO rappresenta il massimo accettabile periodo di tempo in cui i dati possono essere persi durante un incidente di perdita di dati imprevisto.</p>
-<h2 id="obiettivo-di-tempo-di-recupero-(rto---recovery-time-objective)">Obiettivo di Tempo di Recupero (RTO - Recovery Time Objective) <a class="heading-anchor-permalink" href="#obiettivo-di-tempo-di-recupero-(rto---recovery-time-objective)">#</a></h2>
-<p>RTO rappresenta il massimo periodo di tempo di inattività tollerabile per un’azienda senza subire significative perdite finanziarie.</p>
-<h2 id="opzioni-di-disaster-recovery">Opzioni di Disaster Recovery <a class="heading-anchor-permalink" href="#opzioni-di-disaster-recovery">#</a></h2>
-<p>Esistono diverse opzioni per il ripristino dei servizi, ognuna con trade-off tra costi e tempo di ripristino.</p>
-<ul>
-<li>
-<p><strong>Backup e Ripristino</strong>: è un approccio costoso in termini di tempo, in cui si effettua il backup dei dati e si esegue il ripristino su una nuova infrastruttura.</p>
-<ul>
-<li>Low-priority use cases</li>
-<li>Restore data after event</li>
-<li>Deploy resources after event</li>
-<li>Cost $</li>
-</ul>
-</li>
-<li>
-<p><strong>Pilot Light</strong>: implica la replica dei dati su un’altra regione che contiene solo i servizi minimi necessari per l’avvio.</p>
-<ul>
-<li>Less stringed RTO &amp; RPO</li>
-<li>Core Services</li>
-<li>Start &amp; scale resource after event</li>
-<li>Cost $$</li>
-</ul>
-</li>
-<li>
-<p><strong>Warm Standby</strong>: comporta il dimensionamento verso il basso delle copie dell’infrastruttura, pronte per il dimensionamento verso l’alto.</p>
-<ul>
-<li>Business critical services</li>
-<li>Scale resources after event</li>
-<li>Cost $$$</li>
-</ul>
-</li>
-<li>
-<p><strong>Multi-site Active/Active</strong>: rappresenta la scalabilità verso l’alto delle copie dell’infrastruttura in un’altra regione, eliminando i tempi di inattività.</p>
-<ul>
-<li>Zero downtime</li>
-<li>Near zero loss</li>
-<li>Mission critical services</li>
-<li>Cost $$$$</li>
-</ul>
-</li>
-</ul>
-<h2 id="rto-(recovery-time-objective)">RTO (Recovery Time Objective) <a class="heading-anchor-permalink" href="#rto-(recovery-time-objective)">#</a></h2>
-<p>Il Recovery Time Objective (RTO) rappresenta il massimo ritardo accettabile tra l’interruzione dei servizi e il loro completo ripristino. In altre parole, l’RTO definisce la finestra temporale massima entro cui un servizio o un sistema deve essere riportato in funzione dopo un’interruzione. Questa finestra di tempo è stabilita dall’organizzazione in base alle sue esigenze e ai requisiti di continuità operativa.</p>
-<h2 id="rpo-(recovery-point-objective)">RPO (Recovery Point Objective) <a class="heading-anchor-permalink" href="#rpo-(recovery-point-objective)">#</a></h2>
-<p>Il Recovery Point Objective (RPO) rappresenta il massimo periodo di tempo accettabile tra l’ultimo punto di ripristino dei dati disponibili e un’interruzione dei servizi. In termini più semplici, l’RPO definisce quanto tempo di dati è accettabile perdere in caso di un evento di interruzione dei servizi. L’obiettivo è determinare il livello accettabile di perdita di dati tra l’ultimo punto in cui i dati sono stati copiati o archiviati e l’evento di interruzione dei servizi. Anche questo parametro viene definito dall’organizzazione in base alle sue esigenze e ai requisiti di continuità operativa.</p>
+        <h1 id="esempio-%C3%A8-il-titolo">Esempio è il titolo <a class="heading-anchor-permalink" href="#esempio-%C3%A8-il-titolo">#</a></h1>
+<h3 id="qui-del-testo-a-caso">Qui del testo a caso <a class="heading-anchor-permalink" href="#qui-del-testo-a-caso">#</a></h3>
+<p>Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato. Fu reso popolare, negli anni ’60, con la diffusione dei fogli di caratteri trasferibili “Letraset”, che contenevano passaggi del Lorem Ipsum, e più recentemente da software di impaginazione come Aldus PageMaker, che includeva versioni del Lorem Ipsum.</p>
+<h3 id="da-dove-viene%3F">Da dove viene? <a class="heading-anchor-permalink" href="#da-dove-viene%3F">#</a></h3>
+<p>Al contrario di quanto si pensi, Lorem Ipsum non è semplicemente una sequenza casuale di caratteri. Risale ad un classico della letteratura latina del 45 AC, cosa che lo rende vecchio di 2000 anni. Richard McClintock, professore di latino al Hampden-Sydney College in Virginia, ha ricercato una delle più oscure parole latine, consectetur, da un passaggio del Lorem Ipsum e ha scoperto tra i vari testi in cui è citata, la fonte da cui è tratto il testo, le sezioni 1.10.32 and 1.10.33 del “de Finibus Bonorum et Malorum” di Cicerone. Questo testo è un trattato su teorie di etica, molto popolare nel Rinascimento. La prima riga del Lorem Ipsum, “Lorem ipsum dolor sit amet…”, è tratta da un passaggio della sezione 1.10.32.</p>
+<p><img src="https://www.interno15.it/media/k2/items/cache/e13c4c6b684536ecde3ac77213ca4d80_XL.webp" alt=""></p>
 
       </article>
     </div>
