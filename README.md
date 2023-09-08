@@ -37,6 +37,10 @@ Lo script ha delle configurazioni presenti nella cartella env, environment.env; 
 
 ---
 
+#### Come deployare su GithubPages
+
+Dopo aver lanciato lo script vi bastera committare, dopodichè andate su /settings/pages della vostra repository e nella voce 'Build and deployment' --> 'Source' selezionate "deploy from a branch"; selezionate il branch (main) e la cartella della build (docs), infine cliccate su Salva. Nelle /actions della vostra repository avrete un nuovo workflow che al suo completamento vi darà il link del sito.
+
 
 ### Link Utili
 
