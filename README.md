@@ -1,6 +1,6 @@
 # MindMemoir template
 
-MindMemoir ti permette di creare delle wiki dal tuo markdown e raggrupparle in un inco sito web. 
+MindMemoir ti permette di creare delle wiki dal tuo markdown e raggrupparle in un uninco sito web. 
 
 | ![Immagine 1](https://github.com/Elpiu/MindMemoir/blob/template/docs/statics/screenshots/wiki.png) | ![Immagine 2](https://github.com/Elpiu/MindMemoir/blob/template/docs/statics/screenshots/home.png) |
 |:--:|:--:|
