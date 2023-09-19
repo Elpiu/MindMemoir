@@ -1,5 +1,3 @@
-### [Corso](https://elearning.informatica.unisa.it/el-platform/course/view.php?id=828)
-
 ![Sicurezza dei Dati](https://www.key4biz.it/wp-content/uploads/2019/01/data-protection-e1548090116922-480x240.jpg)
 --- 
 
@@ -15,6 +13,20 @@
 - Sicurezza nelle architetture a microservizi
 - Sicurezza nelle basi di dati
 
+
+Prof: 
+- Alfredo De Santis (prima parte) 
+- CHRISTIANCARMINE ESPOSITO (seconda parte)
+
+Materiale Didattico:
+- [De Santis](http://www.di-srv.unisa.it/~ads/pages/index.php/sicurezza/)
+-  [ESPOSITO](https://elearning.informatica.unisa.it/el-platform/course/view.php?id=960)
+
+Esame: 
+- Progetto 
+- Orale
+
+Anno: 2023/2024
 
 ##### Libri di testo
 

@@ -1,11 +1,20 @@
-### [Corso](https://elearning.informatica.unisa.it/el-platform/course/view.php?id=840)
-
 ![Elementi di Crittografia](https://www.it-impresa.it/wp-content/uploads/Crittografia-cifratura.jpg)
 --- 
 
 # Introduzione
 
-non pubblica su E elearning.
+- Prima parte (48 ore): crittografia a chiave privata, funzioni hash, elementi di teoria dei numeri e assunzioni.
+- Seconda parte (24 ore): crittografia a chiave pubblica e protocolli (cenni).
+
+Prof: Paolo D'Arco
+
+Materiale Didattico: [Sito Paolo D'Arco](http://intranet.di.unisa.it/~paodar/ec2023.html)
+
+Esame: 
+- Scritto 
+- Orale solo su richiesta del prof
+
+Anno: 2023/2024
 
 ##### Libri di testo
 

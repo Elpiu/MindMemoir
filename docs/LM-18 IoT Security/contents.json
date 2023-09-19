@@ -1,0 +1,28 @@
+{
+  "paths": [
+    {
+      "type": "file",
+      "value": "00-Intro.md"
+    },
+    {
+      "type": "file",
+      "value": "appuntiOntheRoad.md"
+    }
+  ],
+  "contents": [
+    {
+      "path": "00-Intro.md",
+      "url": "00-Intro.html",
+      "content": "### [Corso](https://elearning.informatica.unisa.it/el-platform/course/view.php?id=839)\r\n\r\n![IoT Security](https://seecontrol.com/wp-content/uploads/2021/08/IoT-based-Asset-solutions-1.jpg)\r\n--- \r\n\r\n# Introduzione\r\nLo scopo del corso è presentare agli studenti tutti gli aspetti delle applicazioni iot, dalle piattaforme hardware e sistemi operativi ai protocolli di comunicazione e alle soluzioni cloud, e presentare le possibili vulnerabilità e gli attacchi che caratterizzano ogni strato di architetture iot (dagli attacchi fisici a anomalie di comunicazione e criticità del software), descrivendo l'insieme di soluzioni esistenti per garantire adeguati livelli di sicurezza.\r\n\r\n\r\nProf: CHRISTIANCARMINE ESPOSITO\r\n\r\nLibro di testo: //\r\n\r\nMateriale Didattico: [elearning](https://elearning.informatica.unisa.it/el-platform/course/view.php?id=971)\r\n\r\nEsame: \r\n- Progetto IoT\r\n- Orale\r\n\r\nAnno: 2023/2024",
+      "html": "<h3 id=\"corso\"><a href=\"https://elearning.informatica.unisa.it/el-platform/course/view.php?id=839\">Corso</a> <a class=\"heading-anchor-permalink\" href=\"#corso\">#</a></h3>\n<h2 id=\"\"><img src=\"https://seecontrol.com/wp-content/uploads/2021/08/IoT-based-Asset-solutions-1.jpg\" alt=\"IoT Security\"> <a class=\"heading-anchor-permalink\" href=\"#\">#</a></h2>\n<h1 id=\"introduzione\">Introduzione <a class=\"heading-anchor-permalink\" href=\"#introduzione\">#</a></h1>\n<p>Lo scopo del corso è presentare agli studenti tutti gli aspetti delle applicazioni iot, dalle piattaforme hardware e sistemi operativi ai protocolli di comunicazione e alle soluzioni cloud, e presentare le possibili vulnerabilità e gli attacchi che caratterizzano ogni strato di architetture iot (dagli attacchi fisici a anomalie di comunicazione e criticità del software), descrivendo l’insieme di soluzioni esistenti per garantire adeguati livelli di sicurezza.</p>\n<p>Prof: CHRISTIANCARMINE ESPOSITO</p>\n<p>Libro di testo: //</p>\n<p>Materiale Didattico: <a href=\"https://elearning.informatica.unisa.it/el-platform/course/view.php?id=971\">elearning</a></p>\n<p>Esame:</p>\n<ul>\n<li>Progetto IoT</li>\n<li>Orale</li>\n</ul>\n<p>Anno: 2023/2024</p>\n",
+      "id": 0
+    },
+    {
+      "path": "appuntiOntheRoad.md",
+      "url": "appuntiOntheRoad.html",
+      "content": "",
+      "html": "",
+      "id": 1
+    }
+  ]
+}

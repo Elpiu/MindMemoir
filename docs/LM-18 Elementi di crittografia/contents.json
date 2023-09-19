@@ -1,0 +1,28 @@
+{
+  "paths": [
+    {
+      "type": "file",
+      "value": "00-Intro.md"
+    },
+    {
+      "type": "file",
+      "value": "appuntiOnDemand.md"
+    }
+  ],
+  "contents": [
+    {
+      "path": "00-Intro.md",
+      "url": "00-Intro.html",
+      "content": "![Elementi di Crittografia](https://www.it-impresa.it/wp-content/uploads/Crittografia-cifratura.jpg)\r\n--- \r\n\r\n# Introduzione\r\n\r\n- Prima parte (48 ore): crittografia a chiave privata, funzioni hash, elementi di teoria dei numeri e assunzioni.\r\n- Seconda parte (24 ore): crittografia a chiave pubblica e protocolli (cenni).\r\n\r\nProf: Paolo D'Arco\r\n\r\nMateriale Didattico: [Sito Paolo D'Arco](http://intranet.di.unisa.it/~paodar/ec2023.html)\r\n\r\nEsame: \r\n- Scritto \r\n- Orale solo su richiesta del prof\r\n\r\nAnno: 2023/2024\r\n\r\n##### Libri di testo\r\n\r\n- [Introduction to Modern Cryptography](https://www.amazon.it/Introduction-Modern-Cryptography-Jonathan-Katz/dp/1466570261)\r\n\r\n- [Cryptography: Theory and Practice (Textbooks in Mathematics)](https://www.amazon.com/Cryptography-Theory-Practice-Textbooks-Mathematics/dp/1138197017/ref=sr_1_1?keywords=MAURA+PATERSON&sr=8-1)\r\n",
+      "html": "<h2 id=\"\"><img src=\"https://www.it-impresa.it/wp-content/uploads/Crittografia-cifratura.jpg\" alt=\"Elementi di Crittografia\"> <a class=\"heading-anchor-permalink\" href=\"#\">#</a></h2>\n<h1 id=\"introduzione\">Introduzione <a class=\"heading-anchor-permalink\" href=\"#introduzione\">#</a></h1>\n<ul>\n<li>Prima parte (48 ore): crittografia a chiave privata, funzioni hash, elementi di teoria dei numeri e assunzioni.</li>\n<li>Seconda parte (24 ore): crittografia a chiave pubblica e protocolli (cenni).</li>\n</ul>\n<p>Prof: Paolo D’Arco</p>\n<p>Materiale Didattico: <a href=\"http://intranet.di.unisa.it/~paodar/ec2023.html\">Sito Paolo D’Arco</a></p>\n<p>Esame:</p>\n<ul>\n<li>Scritto</li>\n<li>Orale solo su richiesta del prof</li>\n</ul>\n<p>Anno: 2023/2024</p>\n<h5 id=\"libri-di-testo\">Libri di testo <a class=\"heading-anchor-permalink\" href=\"#libri-di-testo\">#</a></h5>\n<ul>\n<li>\n<p><a href=\"https://www.amazon.it/Introduction-Modern-Cryptography-Jonathan-Katz/dp/1466570261\">Introduction to Modern Cryptography</a></p>\n</li>\n<li>\n<p><a href=\"https://www.amazon.com/Cryptography-Theory-Practice-Textbooks-Mathematics/dp/1138197017/ref=sr_1_1?keywords=MAURA+PATERSON&amp;sr=8-1\">Cryptography: Theory and Practice (Textbooks in Mathematics)</a></p>\n</li>\n</ul>\n",
+      "id": 0
+    },
+    {
+      "path": "appuntiOnDemand.md",
+      "url": "appuntiOnDemand.html",
+      "content": "",
+      "html": "",
+      "id": 1
+    }
+  ]
+}

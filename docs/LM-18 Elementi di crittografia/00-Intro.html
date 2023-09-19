@@ -477,48 +477,34 @@
       </a>
       <nav id="menu">
         <ul>
-<li><a class="" href="00-A Glossario.html">A Glossario</a></li>
-<li><a class="" href="00-Intro.html">Intro</a></li>
-<li><a class="" href="01-Cloud e AWS.html">Cloud e AWS</a></li>
-<li><a class="" href="02-AWS Infrastructure.html">AWS Infrastructure</a></li>
-<li><a class="" href="03-Termini di Architettura Cloud.html">Termini di Architettura Cloud</a></li>
-<li><a class="active" href="workingOnManagmentAndDevelopmentTools.html">workingOnManagmentAndDevelopmentTools</a></li>
+<li><a class="active" href="00-Intro.html">Intro</a></li>
+<li><a class="" href="appuntiOnDemand.html">appuntiOnDemand</a></li>
 </ul>
       </nav>
       <article id="main" class="content">
-        <h1 id="managment-and-development-tools">Managment and Development Tools <a class="heading-anchor-permalink" href="#managment-and-development-tools">#</a></h1>
-<h3 id="aws-api">AWS API <a class="heading-anchor-permalink" href="#aws-api">#</a></h3>
-<p>AWS Application Programming Interface (API), un API è un pezzo di software che abilita due applicazioni/server a parlare tra loro.
-Il più famoso tipo di API sono quelle via richieste HTTP/S.</p>
-<p>AWS API è un API di tipo HTTP, dove è possibile interagire mandando richieste HTTPS, usando un applicazione o ad esempio Postman.</p>
-<p>Ogni servizio AWS ha i suoi endpoints dove è possibile inviare richieste. Il metodo di autorizzazione è una login request che provvederà a fornire un token per le chiamate. Ci sarà bisogn anche di provvedere un ACTION e accompagnarla da parametri nel payload della richiesta.
-Raramente l’utente invia direttamente le richieste http; è molto più semplice interagire con i vari Developer Tools come ‘AWS Management Console’ web interface, ‘AWS SDK’ api interface che supporta vari linguaggi di programmazione , ‘AWS CLI’ interagisce con le API via terminale o shell.</p>
-<h3 id="aws-sdk">AWS SDK <a class="heading-anchor-permalink" href="#aws-sdk">#</a></h3>
-<p>Un SDK è una collezione di sofware development ottls in un solo pacchetto installabile.</p>
-<p>AWS SDK permette di creare, modificare, eliminare o interagire con le risorse AWS in modo programmatico. AWS SDK è offerto in vari linguaggi di programazione.</p>
-<h2 id="infrastructure-as-code-(iac)">Infrastructure as COde (IaC) <a class="heading-anchor-permalink" href="#infrastructure-as-code-(iac)">#</a></h2>
-<p>Iac ti permette di scrivere uno script di configurazione per automatizzare la creazione, updateing o distruggere un infrastruttura cloud.</p>
-<p>IaC è un blueprint della tua infrastruttura.
-IaC ti abilita facilmente a condividere, versionare o fare l’inventario della tua infrastruttura cloud.</p>
-<p>AWS offre 2 servizi per l’IaC.</p>
+        <h2 id=""><img src="https://www.it-impresa.it/wp-content/uploads/Crittografia-cifratura.jpg" alt="Elementi di Crittografia"> <a class="heading-anchor-permalink" href="#">#</a></h2>
+<h1 id="introduzione">Introduzione <a class="heading-anchor-permalink" href="#introduzione">#</a></h1>
 <ul>
-<li>AWS CloudFoundation (CFN): modo dichiarativo, quello che vedi è quello che ottieni, è più verboso ma non ci sono chance di miss-configuration, usa come linguaggio JSON, YAML, XML.</li>
-<li>AWS Cloud Development Kit (CDK): modo imperativo, dici quello che vuoi e il resto viene riempito in modo implicito, meno verboso ma potresti incombere in una miss-configurazione, puoi fare di più di quello dichiarativo, usa linguaggi di programmazione come Python, Ruby, Javascript.
-<ul>
-<li>genera template CloudFormation</li>
-<li>ha una libreria riusabile di componenti cloud chiamati CDK Construct</li>
-<li>pipelines per velocizzare il suetup di CI/CD per progetti CDK</li>
-<li>ha un framework per il testing, sia unitario che di inegrazione</li>
+<li>Prima parte (48 ore): crittografia a chiave privata, funzioni hash, elementi di teoria dei numeri e assunzioni.</li>
+<li>Seconda parte (24 ore): crittografia a chiave pubblica e protocolli (cenni).</li>
 </ul>
+<p>Prof: Paolo D’Arco</p>
+<p>Materiale Didattico: <a href="http://intranet.di.unisa.it/~paodar/ec2023.html">Sito Paolo D’Arco</a></p>
+<p>Esame:</p>
+<ul>
+<li>Scritto</li>
+<li>Orale solo su richiesta del prof</li>
+</ul>
+<p>Anno: 2023/2024</p>
+<h5 id="libri-di-testo">Libri di testo <a class="heading-anchor-permalink" href="#libri-di-testo">#</a></h5>
+<ul>
+<li>
+<p><a href="https://www.amazon.it/Introduction-Modern-Cryptography-Jonathan-Katz/dp/1466570261">Introduction to Modern Cryptography</a></p>
+</li>
+<li>
+<p><a href="https://www.amazon.com/Cryptography-Theory-Practice-Textbooks-Mathematics/dp/1138197017/ref=sr_1_1?keywords=MAURA+PATERSON&amp;sr=8-1">Cryptography: Theory and Practice (Textbooks in Mathematics)</a></p>
 </li>
 </ul>
-<h3 id="cloud-formation">Cloud Formation <a class="heading-anchor-permalink" href="#cloud-formation">#</a></h3>
-<p>AWS CloudFormation ti abilita a scrivere IaC come JSON o YAML.</p>
-<p>CloudFormation è semplice ma può portare a file di grandi dimensioni o è limitato in qualche modo alla creazione di infrastrutture dinamiche o ripetibili rispetto a CDK</p>
-<p>CloudFoundation è facilmente capibile per un DevOps Engineer che non ha un background nel web programming languages.</p>
-<p>Poiché CDK genera CloudFormation, è comunque importante essere in grado di leggere e comprendere CloudFormation per eseguire il debug dello stack Uac</p>
-<h3 id="access-keys">Access Keys <a class="heading-anchor-permalink" href="#access-keys">#</a></h3>
-<p>4:08:00</p>
 
       </article>
     </div>

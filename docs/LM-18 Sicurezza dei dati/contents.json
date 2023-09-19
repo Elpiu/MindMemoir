@@ -1,0 +1,28 @@
+{
+  "paths": [
+    {
+      "type": "file",
+      "value": "00-Intro.md"
+    },
+    {
+      "type": "file",
+      "value": "appuntiOnTheRoad.md"
+    }
+  ],
+  "contents": [
+    {
+      "path": "00-Intro.md",
+      "url": "00-Intro.html",
+      "content": "![Sicurezza dei Dati](https://www.key4biz.it/wp-content/uploads/2019/01/data-protection-e1548090116922-480x240.jpg)\r\n--- \r\n\r\n# Introduzione\r\n\r\n## Argomenti core del corso\r\n- Strumenti crittografici\r\n- Infrastrutture di sicurezza\r\n- Sicurezza dei sistemi e delle reti\r\n- Legislazione, standard e sicurezza\r\n- Tecnologia blockchain, consenso distribuito e smart contract\r\n- Trusted execution enviroment\r\n- Sicurezza nelle architetture a microservizi\r\n- Sicurezza nelle basi di dati\r\n\r\n\r\nProf: \r\n- Alfredo De Santis (prima parte) \r\n- CHRISTIANCARMINE ESPOSITO (seconda parte)\r\n\r\nMateriale Didattico:\r\n- [De Santis](http://www.di-srv.unisa.it/~ads/pages/index.php/sicurezza/)\r\n-  [ESPOSITO](https://elearning.informatica.unisa.it/el-platform/course/view.php?id=960)\r\n\r\nEsame: \r\n- Progetto \r\n- Orale\r\n\r\nAnno: 2023/2024\r\n\r\n##### Libri di testo\r\n\r\n- [https://www.amazon.com/Cryptography-Network-Security-7Th-Stallings/dp/9332585229](https://www.amazon.com/Cryptography-Network-Security-7Th-Stallings/dp/9332585229)\r\n\r\n- [Crittografia e sicurezza delle reti ](https://www.amazon.it/Crittografia-sicurezza-delle-William-Stallings/dp/8838663777/ref=sr_1_1?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=Crittografia+e+sicurezza+delle+ret&s=books&sr=1-1)\r\n\r\n- [Handbook of Applied Cryptography](https://www.amazon.it/Handbook-Applied-Cryptography-Alfred-Menezes/dp/0849385237/ref=sr_1_1?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=handbook+of+applied+cryptography&s=books&sr=1-1)\r\n\r\n- [Cryptography: Theory and Practice](https://www.amazon.it/Cryptography-Practice-Douglas-Robert-Stinson/dp/1138197017/ref=sr_1_1?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=cryptography+theory+and+practice&s=books&sr=1-1)\r\n\r\n\r\n\r\n",
+      "html": "<h2 id=\"\"><img src=\"https://www.key4biz.it/wp-content/uploads/2019/01/data-protection-e1548090116922-480x240.jpg\" alt=\"Sicurezza dei Dati\"> <a class=\"heading-anchor-permalink\" href=\"#\">#</a></h2>\n<h1 id=\"introduzione\">Introduzione <a class=\"heading-anchor-permalink\" href=\"#introduzione\">#</a></h1>\n<h2 id=\"argomenti-core-del-corso\">Argomenti core del corso <a class=\"heading-anchor-permalink\" href=\"#argomenti-core-del-corso\">#</a></h2>\n<ul>\n<li>Strumenti crittografici</li>\n<li>Infrastrutture di sicurezza</li>\n<li>Sicurezza dei sistemi e delle reti</li>\n<li>Legislazione, standard e sicurezza</li>\n<li>Tecnologia blockchain, consenso distribuito e smart contract</li>\n<li>Trusted execution enviroment</li>\n<li>Sicurezza nelle architetture a microservizi</li>\n<li>Sicurezza nelle basi di dati</li>\n</ul>\n<p>Prof:</p>\n<ul>\n<li>Alfredo De Santis (prima parte)</li>\n<li>CHRISTIANCARMINE ESPOSITO (seconda parte)</li>\n</ul>\n<p>Materiale Didattico:</p>\n<ul>\n<li><a href=\"http://www.di-srv.unisa.it/~ads/pages/index.php/sicurezza/\">De Santis</a></li>\n<li><a href=\"https://elearning.informatica.unisa.it/el-platform/course/view.php?id=960\">ESPOSITO</a></li>\n</ul>\n<p>Esame:</p>\n<ul>\n<li>Progetto</li>\n<li>Orale</li>\n</ul>\n<p>Anno: 2023/2024</p>\n<h5 id=\"libri-di-testo\">Libri di testo <a class=\"heading-anchor-permalink\" href=\"#libri-di-testo\">#</a></h5>\n<ul>\n<li>\n<p><a href=\"https://www.amazon.com/Cryptography-Network-Security-7Th-Stallings/dp/9332585229\">https://www.amazon.com/Cryptography-Network-Security-7Th-Stallings/dp/9332585229</a></p>\n</li>\n<li>\n<p><a href=\"https://www.amazon.it/Crittografia-sicurezza-delle-William-Stallings/dp/8838663777/ref=sr_1_1?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;keywords=Crittografia+e+sicurezza+delle+ret&amp;s=books&amp;sr=1-1\">Crittografia e sicurezza delle reti </a></p>\n</li>\n<li>\n<p><a href=\"https://www.amazon.it/Handbook-Applied-Cryptography-Alfred-Menezes/dp/0849385237/ref=sr_1_1?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;keywords=handbook+of+applied+cryptography&amp;s=books&amp;sr=1-1\">Handbook of Applied Cryptography</a></p>\n</li>\n<li>\n<p><a href=\"https://www.amazon.it/Cryptography-Practice-Douglas-Robert-Stinson/dp/1138197017/ref=sr_1_1?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;keywords=cryptography+theory+and+practice&amp;s=books&amp;sr=1-1\">Cryptography: Theory and Practice</a></p>\n</li>\n</ul>\n",
+      "id": 0
+    },
+    {
+      "path": "appuntiOnTheRoad.md",
+      "url": "appuntiOnTheRoad.html",
+      "content": "",
+      "html": "",
+      "id": 1
+    }
+  ]
+}
