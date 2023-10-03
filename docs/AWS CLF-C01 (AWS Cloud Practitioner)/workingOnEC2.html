@@ -482,43 +482,73 @@
 <li><a class="" href="01-Cloud e AWS.html">Cloud e AWS</a></li>
 <li><a class="" href="02-AWS Infrastructure.html">AWS Infrastructure</a></li>
 <li><a class="" href="03-Termini di Architettura Cloud.html">Termini di Architettura Cloud</a></li>
-<li><a class="active" href="workingOnManagmentAndDevelopmentTools.html">workingOnManagmentAndDevelopmentTools</a></li>
+<li><a class="" href="04-Managment and Development Tools.html">Managment and Development Tools</a></li>
+<li><a class="" href="05-Shared Responsability Model.html">Shared Responsability Model</a></li>
+<li><a class="active" href="workingOnEC2.html">workingOnEC2</a></li>
 </ul>
       </nav>
       <article id="main" class="content">
-        <h1 id="managment-and-development-tools">Managment and Development Tools <a class="heading-anchor-permalink" href="#managment-and-development-tools">#</a></h1>
-<h3 id="aws-api">AWS API <a class="heading-anchor-permalink" href="#aws-api">#</a></h3>
-<p>AWS Application Programming Interface (API), un API è un pezzo di software che abilita due applicazioni/server a parlare tra loro.
-Il più famoso tipo di API sono quelle via richieste HTTP/S.</p>
-<p>AWS API è un API di tipo HTTP, dove è possibile interagire mandando richieste HTTPS, usando un applicazione o ad esempio Postman.</p>
-<p>Ogni servizio AWS ha i suoi endpoints dove è possibile inviare richieste. Il metodo di autorizzazione è una login request che provvederà a fornire un token per le chiamate. Ci sarà bisogn anche di provvedere un ACTION e accompagnarla da parametri nel payload della richiesta.
-Raramente l’utente invia direttamente le richieste http; è molto più semplice interagire con i vari Developer Tools come ‘AWS Management Console’ web interface, ‘AWS SDK’ api interface che supporta vari linguaggi di programmazione , ‘AWS CLI’ interagisce con le API via terminale o shell.</p>
-<h3 id="aws-sdk">AWS SDK <a class="heading-anchor-permalink" href="#aws-sdk">#</a></h3>
-<p>Un SDK è una collezione di sofware development ottls in un solo pacchetto installabile.</p>
-<p>AWS SDK permette di creare, modificare, eliminare o interagire con le risorse AWS in modo programmatico. AWS SDK è offerto in vari linguaggi di programazione.</p>
-<h2 id="infrastructure-as-code-(iac)">Infrastructure as COde (IaC) <a class="heading-anchor-permalink" href="#infrastructure-as-code-(iac)">#</a></h2>
-<p>Iac ti permette di scrivere uno script di configurazione per automatizzare la creazione, updateing o distruggere un infrastruttura cloud.</p>
-<p>IaC è un blueprint della tua infrastruttura.
-IaC ti abilita facilmente a condividere, versionare o fare l’inventario della tua infrastruttura cloud.</p>
-<p>AWS offre 2 servizi per l’IaC.</p>
+        <p>— COMPUTE</p>
+<h3 id="ec2-overview">EC2 Overview <a class="heading-anchor-permalink" href="#ec2-overview">#</a></h3>
+<p>Elastic Compute CLoud (EC2) abilita a lanciare Virtual Machines (VM).</p>
+<p>Una macchina virtuale è un emulazione di un computer fisico usando il software. La virtualizzazione dei server abilita a facilitare la creazione, copia, ridimensione o migrazione del server. Più istanze di VM possono girare sullo stesso server fisico, quindi è possibile condividere i costi con gli altri clienti. (Immagina che il tuo server/computer sia un file eseguibile sulla tua macchina).</p>
+<p>Quando lanci una macchina virtuale questa è chiamata <strong>istanza</strong>.
+I server EC2 sono altamente configurabili, dove si può scegliere opzioni del tipo:</p>
 <ul>
-<li>AWS CloudFoundation (CFN): modo dichiarativo, quello che vedi è quello che ottieni, è più verboso ma non ci sono chance di miss-configuration, usa come linguaggio JSON, YAML, XML.</li>
-<li>AWS Cloud Development Kit (CDK): modo imperativo, dici quello che vuoi e il resto viene riempito in modo implicito, meno verboso ma potresti incombere in una miss-configurazione, puoi fare di più di quello dichiarativo, usa linguaggi di programmazione come Python, Ruby, Javascript.
-<ul>
-<li>genera template CloudFormation</li>
-<li>ha una libreria riusabile di componenti cloud chiamati CDK Construct</li>
-<li>pipelines per velocizzare il suetup di CI/CD per progetti CDK</li>
-<li>ha un framework per il testing, sia unitario che di inegrazione</li>
+<li>Numero di CPU</li>
+<li>Memoria RAM</li>
+<li>Network Bandwidth</li>
+<li>Sitema operativo</li>
+<li>Attaccare multipli virtual-hard-drives per lo storage</li>
 </ul>
+<p>AMI è la configurazione predefinita per le macchine virtuali. EC2 è anche considerata la spina dorsale di AWS poichè la maggior parte dei servizi AWS fanno uso di EC2 come sottostante (es. S3, RDS, DynamoDB, Lambdas).</p>
+<p>Altri tipi di Computing Services</p>
+<ul>
+<li>
+<p>Amazon LightSail è la versioen friendly di EC2 Virtual Machine.</p>
+</li>
+<li>
+<p>Elastic Container Service (ECS) è un container orchestrator service che supporta i Docker containers. Lancia un cluster di servizi su EC2 con Docker install.</p>
+</li>
+<li>
+<p>Elastic Container Registry (ECR) è iuna repository per contenere immagini di container. In modo da lanciare un container hai bisogno di un immagine. Un immagine è semplicemente una copia salvata. Una repository significa uno storage che ha versuon control</p>
+</li>
+<li>
+<p>ECS Fargate è un serverless orchestation container service. è la stessa cosa di ECS solo che ha il pay-on-demand sui running container. (Con ECS i server gireranno anche se non ci sono container startati) AWS controlla i server sottostante, quindi non avrai bisogno di scalare o migliorare un EC2 server.</p>
+</li>
+<li>
+<p>Elastic Kubernetics Service (EKS) è un fully managed Kubernatics service. Kubernetics K8 è un orchestratore software open-source che è stato creato da Google ed è in generale uno standard per la gestioen di microservizi.</p>
+</li>
+<li>
+<p>AWS Lambda è un serveless functions service. Puoi far girare il codice senza approvigionamento o gestire il server. Farai upload di uno piccolo pezzo di codice, scegliere quanta memoria e quanto a lungo la funzionalità è abilitata a girare prima di un timeout. Sei addebbitato basato al runtime della funzionalità servelless con arrotondamento di 100ms.</p>
 </li>
 </ul>
-<h3 id="cloud-formation">Cloud Formation <a class="heading-anchor-permalink" href="#cloud-formation">#</a></h3>
-<p>AWS CloudFormation ti abilita a scrivere IaC come JSON o YAML.</p>
-<p>CloudFormation è semplice ma può portare a file di grandi dimensioni o è limitato in qualche modo alla creazione di infrastrutture dinamiche o ripetibili rispetto a CDK</p>
-<p>CloudFoundation è facilmente capibile per un DevOps Engineer che non ha un background nel web programming languages.</p>
-<p>Poiché CDK genera CloudFormation, è comunque importante essere in grado di leggere e comprendere CloudFormation per eseguire il debug dello stack Uac</p>
-<h3 id="access-keys">Access Keys <a class="heading-anchor-permalink" href="#access-keys">#</a></h3>
-<p>4:08:00</p>
+<h3 id="higher-performance-computing-servics">Higher Performance Computing Servics <a class="heading-anchor-permalink" href="#higher-performance-computing-servics">#</a></h3>
+<p>Nitro System, una combinazionee di hardware dedicato e lightweight hypervisor che consentendo un’innovazione più rapida e una maggiore sicurezza. Tutte le nuove istanze di EC2 utilizzano Nitro System.</p>
+<ul>
+<li>
+<p>Nitro Cards, specializzate per VPC, EBS e instanze di storgage e controlled card.</p>
+</li>
+<li>
+<p>Nitro Security Chips, integrato nella scheda madre, protegge le risorse hardware.</p>
+</li>
+<li>
+<p>Nitro Hypervisor, lightwieght hypervisor per la memoria e la CPU allcoata Bare Metal-like performance.</p>
+</li>
+</ul>
+<p>Bare Metal Instance puoi lanciare instanze EC2 che non hanno hypervisor quindi puoi girare i tuoi workload direttamente sull’hardware per massimizzare le performance e controllo. M5 e R5 EC2 instance are bare metal.</p>
+<h4 id="bottlerocket">Bottlerocket <a class="heading-anchor-permalink" href="#bottlerocket">#</a></h4>
+<p>Una Linux-based open-source operation system costruito per AWS per lanciare containers in virtual machine o bare metal hosts.</p>
+<h4 id="aws-parallelcluster">AWS ParallelCluster <a class="heading-anchor-permalink" href="#aws-parallelcluster">#</a></h4>
+<p>è un AWS-supported open source cluster management tool che rende facile il deploy e gestire l’High performance computing (HPC) cluster su AWS.</p>
+<hr>
+<h5 id="aws-wavelength">AWS Wavelength <a class="heading-anchor-permalink" href="#aws-wavelength">#</a></h5>
+<p>Abilita a costruire e lanciare le tue applciazioni in un datacenter telecom. Facendo questo la tua applicazione avrà una latenza ultra-low, e sarà più vicina al cliente finale.</p>
+<h5 id="vmware-cloud-on-aws">VMWare Cloud on AWS <a class="heading-anchor-permalink" href="#vmware-cloud-on-aws">#</a></h5>
+<p>abilita a gestire on-premis virtual machine usando VMWare come un istanza EC2</p>
+<h5 id="aws-local-zone">AWS Local Zone <a class="heading-anchor-permalink" href="#aws-local-zone">#</a></h5>
+<p>è un datacenter è un datacenter situato al bordo di un AWS region, in questo modo è possibile usare AWS vicino alla destinazione finale.</p>
+<p>5:26:00</p>
 
       </article>
     </div>

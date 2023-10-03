@@ -477,12 +477,148 @@
       </a>
       <nav id="menu">
         <ul>
+<li><a class="" href="00-A Glossario.html">A Glossario</a></li>
 <li><a class="" href="00-Intro.html">Intro</a></li>
-<li><a class="active" href="appuntiOntheRoad.html">appuntiOntheRoad</a></li>
+<li><a class="" href="01-Cloud e AWS.html">Cloud e AWS</a></li>
+<li><a class="" href="02-AWS Infrastructure.html">AWS Infrastructure</a></li>
+<li><a class="" href="03-Termini di Architettura Cloud.html">Termini di Architettura Cloud</a></li>
+<li><a class="" href="04-Managment and Development Tools.html">Managment and Development Tools</a></li>
+<li><a class="active" href="05-Shared Responsability Model.html">Shared Responsability Model</a></li>
+<li><a class="" href="workingOnEC2.html">workingOnEC2</a></li>
 </ul>
       </nav>
       <article id="main" class="content">
-        <p>emulatore iot  <a href="https://www.tinkercad.com/">https://www.tinkercad.com/</a></p>
+        <h1 id="shared-responsibility-model">Shared Responsibility Model <a class="heading-anchor-permalink" href="#shared-responsibility-model">#</a></h1>
+<p>Lo “Shared Responsibility Model” è un framework che definisce le responsabilità di sicurezza del cliente nei confronti del Cloud Service Provider (CSP).</p>
+<p>Ogni CSP ha la propria variante del modello di condivisione di responsabilità, ma in generale seguono la stessa logica.</p>
+<p>Per AWS, il modello di condivisione di responsabilità si suddivide tra AWS e il cliente come segue:</p>
+<h5 id="aws">AWS <a class="heading-anchor-permalink" href="#aws">#</a></h5>
+<ul>
+<li><strong>Hardware / Global Infrastructure</strong>: Regioni, Zone di Disponibilità, Punti di Presenza, Sicurezza Fisica.</li>
+<li><strong>Software</strong>: Calcolo, Archiviazione, Database, Rete.</li>
+</ul>
+<h5 id="cliente">Cliente <a class="heading-anchor-permalink" href="#cliente">#</a></h5>
+<ul>
+<li><strong>Configurazione dei Servizi Gestiti o Software di Terze Parti</strong>: Piattaforme, Applicazioni, Gestione delle Identità e degli Accessi (IAM).</li>
+<li><strong>Configurazione dell’Infrastruttura Virtuale e dei Sistemi</strong>: Sistema Operativo, Rete, Firewall.</li>
+<li><strong>Configurazione di Sicurezza dei Dati</strong>: Crittografia dei Dati Lato Cliente, Crittografia dei Dati Lato Server, Protezione del Traffico di Rete, Dati del Cliente.</li>
+</ul>
+<p>In breve, AWS è responsabile della sicurezza del cloud, mentre i clienti AWS sono responsabili della sicurezza nel cloud. Ciò significa che AWS si prende cura della sicurezza dell’infrastruttura sottostante, mentre i clienti sono responsabili della corretta configurazione e gestione delle risorse e dei dati che piazzano sul cloud AWS.</p>
+<h3 id="types-of-cloud-computing-responsibility">Types of Cloud Computing Responsibility <a class="heading-anchor-permalink" href="#types-of-cloud-computing-responsibility">#</a></h3>
+<p>Ecco un elenco delle responsabilità dell’utente in base al tipo di Cloud Computing:</p>
+<ul>
+<li>
+<p><strong>On-Premise</strong>:</p>
+<ul>
+<li>Applicazioni</li>
+<li>Dati</li>
+<li>Runtime</li>
+<li>Middleware</li>
+<li>Sistema Operativo</li>
+<li>Virtualizzazione</li>
+<li>Server</li>
+<li>Archiviazione</li>
+<li>Networking</li>
+</ul>
+</li>
+<li>
+<p><strong>Infrastructure as a Service (IaaS)</strong>:</p>
+<ul>
+<li>Applicazioni</li>
+<li>Dati</li>
+<li>Runtime</li>
+<li>Middleware</li>
+<li>Sistema Operativo</li>
+</ul>
+</li>
+<li>
+<p><strong>Platform as a Service (PaaS)</strong>:</p>
+<ul>
+<li>Applicazioni</li>
+<li>Dati</li>
+</ul>
+</li>
+<li>
+<p><strong>Software as a Service (SaaS)</strong>:</p>
+<ul>
+<li>(In genere non vi sono responsabilità dirette per l’utente, in quanto il servizio è completamente gestito dal provider SaaS)</li>
+</ul>
+</li>
+</ul>
+<h3 id="shared-responsibility-model---compute">Shared Responsibility Model - Compute <a class="heading-anchor-permalink" href="#shared-responsibility-model---compute">#</a></h3>
+<h6 id="bare-metal-(ec2-bare-metal-instance)">Bare Metal (EC2 Bare Metal Instance) <a class="heading-anchor-permalink" href="#bare-metal-(ec2-bare-metal-instance)">#</a></h6>
+<p>Cliente:</p>
+<pre><code>- Configurazione del sistema operativo ospite (Guest OS)
+- Hypervisor
+</code></pre>
+<p>AWS:</p>
+<pre><code>- Macchine fisiche
+</code></pre>
+<h6 id="macchine-virtuali-(virtual-machine---elastic-cloud-compute-ec2)">Macchine Virtuali (Virtual Machine - Elastic Cloud Compute EC2) <a class="heading-anchor-permalink" href="#macchine-virtuali-(virtual-machine---elastic-cloud-compute-ec2)">#</a></h6>
+<p>Cliente:</p>
+<pre><code>- Configurazione del sistema operativo guest (Guest OS)
+- Esecuzione di container (Container Runtime)
+</code></pre>
+<p>AWS:</p>
+<pre><code>- Hypervisor, Macchina fisica
+</code></pre>
+<h6 id="contenitori-(aws-elastic-container-service-ecs)">Contenitori (AWS Elastic Container Service ECS) <a class="heading-anchor-permalink" href="#contenitori-(aws-elastic-container-service-ecs)">#</a></h6>
+<p>Cliente:</p>
+<pre><code>- Configurazione del contenitore
+- Distribuzione del contenitore
+- Gestione dello storage del contenitore
+</code></pre>
+<p>AWS:</p>
+<pre><code>- Sistema operativo, Hypervisor, Esecuzione di contenitori (Container Runtime)
+</code></pre>
+<h5 id="platform-as-a-service-(paas)">Platform as a Service (PaaS) <a class="heading-anchor-permalink" href="#platform-as-a-service-(paas)">#</a></h5>
+<ul>
+<li>
+<p><strong>Piattaforma Gestita (AWS Elastic Beanstalk)</strong>
+Cliente:</p>
+<ul>
+<li>
+<p>Caricamento del tuo codice</p>
+</li>
+<li>
+<p>Alcune configurazioni del tuo ambiente</p>
+</li>
+<li>
+<p>Strategie di deployment</p>
+</li>
+<li>
+<p>Configurazione dei servizi associati
+AWS:</p>
+</li>
+<li>
+<p>Server, Sistema Operativo, Networking, Archiviazione, Sicurezza</p>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="software-as-a-service-(saas)">Software as a Service (SaaS) <a class="heading-anchor-permalink" href="#software-as-a-service-(saas)">#</a></h5>
+<ul>
+<li><strong>Collaborazione per i Contenuti</strong> Amazon WorkDocs</li>
+</ul>
+<p>Cliente:
+- Contenuti dei documenti
+- Gestione dei file
+- Configurazione dei controlli di accesso alla condivisione
+AWS:</p>
+<pre><code>- Server, Sistema Operativo, Networking, Archiviazione, Sicurezza
+</code></pre>
+<h5 id="function-as-a-service-(faas)">Function as a Service (FaaS) <a class="heading-anchor-permalink" href="#function-as-a-service-(faas)">#</a></h5>
+<ul>
+<li>Funzioni (AWS Lambda)</li>
+</ul>
+<p>Cliente:
+- Caricare il propio codice</p>
+<p>AWS:</p>
+<pre><code>- Deployment, Esecuzione dei container (Container Runtime), Networking, Archiviazione, Sicurezza, Macchina fisica (praticamente tutto)
+</code></pre>
+<p>Il modello di condivisione delle responsabilità è uno strumento utile per definire chi è responsabile di cosa quando si tratta di sicurezza e gestione dell’infrastruttura e dei servizi cloud. Chiarezza e comprensione delle responsabilità sono fondamentali per garantire una corretta implementazione e una gestione sicura delle risorse cloud.</p>
+<h3 id="shared-responsibility-model---architeture">Shared Responsibility Model - Architeture <a class="heading-anchor-permalink" href="#shared-responsibility-model---architeture">#</a></h3>
+<p><img src="https://github.com/Elpiu/MindMemoir/blob/main/AWS%20CLF-C01%20(AWS%20Cloud%20Practitioner)/imgs/AWS_responsability_model.png?raw=true" alt="Shared Responsibility Model"></p>
 
       </article>
     </div>
